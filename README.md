@@ -159,7 +159,7 @@ Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://tw
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
 David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
 Kathryn Kelly - [Github](https://github.com/Kathryn8) / [LinkedIn](https://www.linkedin.com/in/kathryn-kelly-7b10b3243/)
-Bryan Field - [Github](https://github.com/BryanField15) / [LinkedIn](https://www.linkedin.com/in/bryan-f-231b78162/)
+Bryan Field 3- [Github](https://github.com/BryanField15) / [LinkedIn](https://www.linkedin.com/in/bryan-f-231b78162/)
 
 Second part of Airbnb: Joann Vuong
 ## License
