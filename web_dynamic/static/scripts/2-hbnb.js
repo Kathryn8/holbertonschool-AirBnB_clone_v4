@@ -22,7 +22,7 @@ $(document).ready(function () {
       console.log("ok")
       $('div#api_status').addClass("available");
     } else {
-      $('div#api_status').removeClass("available");
+      $('#api_status').removeClass("available");
     }
   });
 });
