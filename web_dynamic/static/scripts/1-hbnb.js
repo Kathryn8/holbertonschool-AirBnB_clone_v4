@@ -1,21 +1,20 @@
 $(document).ready(function () {
-  let ids_obj = {};
+  const idsObj = {};
   $('input[type="checkbox"]').on('change', function () {
-    const amenity_id = this.dataset.id;
-    const amenity_name = this.dataset.name;
+    const amenityId = this.dataset.id;
+    const amenityName = this.dataset.name;
     if (this.checked) {
       console.log('Checked');
-      ids_obj[amenity_id] = amenity_name
-      console.log(ids_obj)
-    }
-    else {
+      idsObj[amenityId] = amenityName;
+      console.log(idsObj);
+    } else {
       console.log('Unchecked');
-      delete ids_obj[amenity_id];
+      delete idsObj[amenityId];
       // ids_list = ids_list.filter(function (element) {
-      // return element !== amenity_id;
-      //});
-      console.log(ids_obj)
-    };
-    $('.amenities > h4').text(Object.values(ids_obj).join(', '))
+      // return element !== amenityId;
+      // });
+      console.log(idsObj);
+    }
+    $('.amenities > h4').text(Object.values(idsObj).join(', '));
   });
 });

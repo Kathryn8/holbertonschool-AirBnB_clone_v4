@@ -1,11 +1,11 @@
 $(document).ready(function () {
   const checkedAmenities = {};
 
-  function updateAmenitiesText() {
+  function updateAmenitiesText () {
     $('.amenities > h4').text(Object.values(checkedAmenities).join(', '));
   }
 
-  function addPlaceToSection(place) {
+  function addPlaceToSection (place) {
     $('section.places').append(`
       <article>
         <div class="title_box">
@@ -13,9 +13,9 @@ $(document).ready(function () {
           <div class="price_by_night">$${place.price_by_night}</div>
         </div>
         <div class="information">
-          <div class="max_guest">${place.max_guest} Guest${place.max_guest !== 1 ? "s" : ""}</div>
-          <div class="number_rooms">${place.number_rooms} Bedroom${place.number_rooms !== 1 ? "s" : ""}</div>
-          <div class="number_bathrooms">${place.number_bathrooms} Bathroom${place.number_bathrooms !== 1 ? "s" : ""}</div>
+          <div class="max_guest">${place.max_guest} Guest${place.max_guest !== 1 ? 's' : ''}</div>
+          <div class="number_rooms">${place.number_rooms} Bedroom${place.number_rooms !== 1 ? 's' : ''}</div>
+          <div class="number_bathrooms">${place.number_bathrooms} Bathroom${place.number_bathrooms !== 1 ? 's' : ''}</div>
         </div>
         <div class="user"></div>
         <div class="description">${place.description}</div>
@@ -23,16 +23,16 @@ $(document).ready(function () {
     `);
   }
 
-  function updatePlaces(data) {
+  function updatePlaces (data) {
     $('section.places').empty();
     data.forEach(addPlaceToSection);
   }
 
-  function updateApiStatus(data) {
-    if (data.status === "OK") {
-      $('div#api_status').addClass("available");
+  function updateApiStatus (data) {
+    if (data.status === 'OK') {
+      $('div#api_status').addClass('available');
     } else {
-      $('#api_status').removeClass("available");
+      $('#api_status').removeClass('available');
     }
   }
 
@@ -50,11 +50,11 @@ $(document).ready(function () {
   $.get('http://0.0.0.0:5001/api/v1/status/', updateApiStatus);
 
   $.ajax({
-    type: "POST",
+    type: 'POST',
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
-    data: "{}",
-    contentType: "application/json; charset=utf-8",
-    dataType: "json",
+    data: '{}',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
     success: updatePlaces
   });
 
@@ -63,11 +63,11 @@ $(document).ready(function () {
     const amenityObj = { amenities: amenityList };
 
     $.ajax({
-      type: "POST",
+      type: 'POST',
       url: 'http://0.0.0.0:5001/api/v1/places_search/',
       data: JSON.stringify(amenityObj),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
       success: updatePlaces
     });
   });
